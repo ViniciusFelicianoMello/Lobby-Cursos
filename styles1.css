@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+:root {
+    --cor-um: #416af0;
+    --cor-dois: #7bf8ff;
+    --cor-tres: #042943;
+    --cor-tres-t: #0429435f;
+    --cor-quatro: #00ff7b;
+    --font-um: "Share Tech", sans-serif;
+
+    --box-shadow: 0 0 5px var(--cor-dois);
+    --box-shadow2: 0 0 10px var(--cor-quatro);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--font-um);
+    font-size: 16px;
+    color: var(--cor-um);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 0.1px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-dois);
+    border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+body {
+    background-image: url("assets/cursos.png");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+
+}
+
+.principal {
+    margin: 5em 10em;
+    display: flex;
+    height: 80%;
+    justify-content: space-between;
+}
+
+.box {
+    width: 30%;
+    height: 100%;
+    background: var(--cor-tres-t);
+    backdrop-filter: blur(20px);
+    margin-bottom: 2em;
+    overflow: scroll;
+    padding: 2em;
+    border: 3px solid var(--cor-um);
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+}
+
+.box h2 {
+    color: var(--cor-um);
+    font-size: 2em;
+    background-color: var(--cor-tres);
+    border-radius: 2rem;
+    padding: 0.1em 0.5em;
+    margin: 0 0 1em 0;
+}
+
+.box_cards .curso_lista {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2em;
+}
+
+.curso_item {
+    border: 2px solid var(--cor-um);
+    border-radius: 1em;
+    height: 10em;
+    width: 100%;
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+.curso_item:hover {
+    scale: 1.03;
+    box-shadow: var(--box-shadow2);
+}
+.curso_item:hover h3 {
+    color: var(--cor-quatro);
+}
+
+.curso_item .curso_img {
+    height: 90%;
+    width: 100%;
+}
+
+.curso_item h3 {
+    position: absolute;
+    bottom: 0;
+    align-self: center;
+    justify-self: center;
+    margin-left: 2em;
+    width: 100%;
+    z-index: 1;
+}
+
+.curso_item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5em;
+    width: 100%;
+    background: var(--cor-tres);
+}
